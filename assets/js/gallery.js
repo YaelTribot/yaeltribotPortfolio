@@ -56,10 +56,10 @@ document.addEventListener('DOMContentLoaded', function() {
             ],
             imageTexts: [
                 { title: 'MAN', description: 'MAN est le premier projet illustrator que j\'ai réalisé. Aujourd\'hui c\'est un peu devenu mon logo/ma marque de fabrique. Je voulais faire un style d\'auto portrait dans un style que j\'aimais bien : le flat design, qui consiste à créer des éléments très simple et sans trop de détail.' },
-                { title: 'Frog', description: 'Frog est ma création préféré en illustrator. Je trouve que c\'était marrant de faire une grenouille humanoide et j\'en suis plutôt fier.' },
-                { title: 'Flee', description: 'Flee était une création que j\'ai fait un peu sans réfléchir mais je suis plutôt satisfait je la trouve cool' },
-                { title: 'Groovy', description: 'Groovy était censé être dans un style de poster mais j\'ai finalement abandonné l\'idée. J\'aime bien cette création mais j\'en suis pas stisfat à 100%. ' },
-                { title: 'Fly', description: 'Fly était un projet qui m\'a été demandé par un ami. Il fait de la musique dans le style du rock alternatif et experimental et voulait que je fasse sa cover. Donc j\'ai accepté et je suis satisfait et lui aussi. Il représente la moouche qui est le sujet principal de son morceau.' }
+                { title: 'Frog', description: 'Frog est ma création préféré en illustrator. Je trouve que c\'était marrant de faire une grenouille humanoïde et j\'en suis plutôt fier.' },
+                { title: 'Flee', description: 'Flee était une création que j\'ai fait un peu sans réfléchir mais je suis plutôt satisfait je la trouve cool.' },
+                { title: 'Groovy', description: 'Groovy était censé être dans un style de poster mais j\'ai finalement abandonné l\'idée. J\'aime bien cette création mais j\'en suis pas satisfait à 100%. ' },
+                { title: 'Fly', description: 'Fly était un projet qui m\'a été demandé par un ami. Il fait de la musique dans le style du rock alternatif et experimental et voulait que je fasse sa cover. Donc j\'ai accepté et je suis satisfait et lui aussi. Il représente la mouche qui est le sujet principal de son morceau.' }
             ]
             
         }
