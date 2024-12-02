@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
             imageTexts: [
                 {
                     title: 'COLORS #1 - Alpha Wann',
-                    description: "Cette création s'inscrit dans une suite de projet que je suis en train de créer qui reprend des image de Colors. Colors est une plateforme musicale qui invite des artistes à performer sur une version exclusive d'une de leur musique. Je suis en train d'en faire d'autres actuellement. Voici l'image de référence :",
+                    description: "Cette création s'inscrit dans une suite de projet que je suis en train de créer qui reprend des image de Colors. Colors est une plateforme musicale qui invite des artistes à performer sur une version exclusive d'une de leur musique. Je suis en train d'en faire d'autres actuellement.",
                 },
                 {
                     title: 'INKTOBER #1 - SAC À DOS',
