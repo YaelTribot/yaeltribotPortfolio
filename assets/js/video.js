@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         {
             title: "Bourre-Pif",
-            description: "C'est un court-métrage que nous avons réalisé, écrit, tourné et monté en équipe de 3 personnes. Nous étions en classe de terminale das notre option cinéma et avons gagné le prix du public, le soir de projection de tous les films du lycée. Je garde un très bon souvenir de tournage avec cette équipe et nous sommes très fier du résultat de ce film, encore aujourd'hui c'est mon court-métrage préféré."
+            description: "C'est un court-métrage que nous avons réalisé, écrit, tourné et monté en équipe de 3 personnes. Nous étions en classe de terminale dans notre option cinéma et avons gagné le prix du public, le soir de projection de tous les films du lycée. Je garde un très bon souvenir de tournage avec cette équipe et nous sommes très fier du résultat de ce film, encore aujourd'hui c'est mon court-métrage préféré."
         },
         {
             title: "L'audition",
