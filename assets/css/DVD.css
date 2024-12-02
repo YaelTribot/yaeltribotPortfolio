@@ -1,0 +1,62 @@
+/* Initial DVD position off-screen */
+.rotating-container {
+    position: absolute;
+    top: 50%;
+    left: -700px;
+    transform: translateY(-50%);
+    transition: left 0.5s ease-in-out;
+    z-index: 99;
+}
+
+.rotating-container.extended {
+    left: 0px; /* New position closer */
+}
+
+/* DVD Image */
+#rotating-image {
+    width: 700px;
+    height: auto;
+    animation: spin 2s linear infinite;
+    transition: transform 0.5s ease;
+}
+
+/* Rotation animation */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 1100px) {
+.rotating-container {
+    margin-top: 150px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1000px;
+    height: 350px;
+    z-index: 9;
+}
+
+#rotating-image {
+    width: 100%;
+    height: auto;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+}
+
+@media (max-width: 650px) {
+    .rotating-container {
+        width: 700px;
+    }
+}
+
+

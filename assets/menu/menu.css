@@ -1,0 +1,439 @@
+*{
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif, sans-serif;
+    overflow: hidden;
+}
+
+/* Site Menu Styling */
+#site-menu {
+    transform: translateY(-50%);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    z-index: 99;
+    pointer-events: none;
+}
+
+#site-menu > * {
+    pointer-events: auto;
+}
+
+/* Menu Button */
+.menu-btn {
+    position: fixed;
+    cursor: pointer;
+    border: none;
+    z-index: 90;
+    height: 87px;
+    transition: transform 0.3s ease;
+}
+
+.menu-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    background-color: #fe6767;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 999;
+    border-radius: 20px;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    width: 90px;
+    transform: translateX(calc(100% + 50px));
+    opacity: 0;
+    margin-top: 100px;
+}
+
+.sidebar > a{
+    text-decoration: none;
+    color: #000;
+}
+.sidebar.active {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.sidebar i {
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 35px 0;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.sidebar i:hover {
+    transform: scale(1.1);
+    color: #fff;
+}
+
+/* Dropdowns */
+.contact-form {
+    position: fixed;
+    background-color: #f99c9c;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 20px;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    z-index: 88; /* Reduced z-index */
+    right: 90px;
+    top: 100px;
+    height: 408px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(20px);
+    visibility: hidden; /* Added to ensure complete hiding */
+}
+
+.contact-form.active {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateX(0);
+    visibility: visible;
+    z-index: 90; /* Increased z-index when active */
+}
+.contact-form-content {
+    padding: 20px 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contact-info {
+    padding: 15px;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.contact-info:hover {
+    transform: translateY(-2px);
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #fe6767;
+    box-shadow: 0 0 5px rgba(254, 103, 103, 0.3);
+}
+
+.contact-form textarea {
+    height: 80px;
+    resize: none;
+}
+
+.contact-form label {
+    display: block;
+    margin-top: 10px;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #555;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form button:active {
+    transform: translateY(0);
+}
+
+.cv-form-content {
+    padding: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cv-form img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.cv-form img:hover {
+    transform: scale(1.02);
+}
+/* Style du bouton de téléchargement */
+.cv-form-content > .download-btn {
+    background-color: white ;
+    border-radius: 8px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.download-btn i {
+    color: black;
+    font-size: 2.5rem;
+}
+
+.download-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Centrer le contenu dans le déroulant */
+.access-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+/* Style des lettres A+ et A- */
+.access-content h4 {
+    margin: 10px 5px;
+    font-size: 2rem;
+    color: #000;
+}
+
+/* Style pour le joystick */
+#joystick {
+    width: 150px;
+    cursor: pointer;
+}
+
+.contact-form.access {
+    height: 100px; 
+    top: 407px;
+}
+
+
+@media (max-width: 1100px) {
+    #site-menu {
+        right: 50%;
+        top: 50%;
+        transform: translate(50%, -50%);
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        z-index: 9999;
+        pointer-events: none;
+        position: fixed;
+
+    }
+
+    .menu-btn {
+        display: none;
+    }
+
+    .sidebar {
+        flex-direction: row;
+        justify-content: space-around;
+        width: 80%; /* Correspond à la largeur du menu */
+        transform: translateX(0);
+        opacity: 1;
+        background-color: #fe6767;
+        height: 60px;
+        margin-top: 15px;
+        padding: 0 25px; 
+    }
+
+    .sidebar i {
+        padding: 0 15px;
+    }
+
+    .contact-form {
+        position: fixed;
+        opacity: 0;
+        transform: translate(-0%, -50%);
+        width: 80%;
+        right: 10%;
+        top: 5%;
+        pointer-events: none;
+        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .contact-form.active {
+        opacity: 1;
+        pointer-events: all;
+        transform: translateX(0);
+        visibility: visible;
+    }
+    .access-content{
+        display: flex;
+        justify-content: center;
+        top: 5%;
+        
+    }
+    .cv-form{
+        text-align: center ;
+    }
+    .cv-form img {
+        width: 55%;
+        margin-top: 30px;
+    }
+
+    .contact-form.access {
+        position: fixed;
+        opacity: 0;
+        transform: translate(-0%, -50%);
+        width: 80%;
+        right: 10%;
+        top: 5%;
+        pointer-events: none;
+        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .contact-form.access.active {
+        opacity: 1;
+        pointer-events: all;
+        transform: translateX(0);
+        visibility: visible;
+    }
+
+    #joystick {
+        width: 70%;
+    }
+}
+
+@media (max-width: 650px) {
+
+    .sidebar{
+        width: 60%;
+    }
+
+    .contact-form {
+        width: 60%;
+        right: 20%;
+    }
+
+    .contact-form.access{
+        width: 60%;
+        right: 20%;
+    }
+
+    .cv-form img {
+        width: 80%;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 450px) {
+    .sidebar {
+        width: 60%; /* Augmentation de la largeur pour plus de flexibilité */
+        height: 50px; /* Réduction de la hauteur */
+        margin-top: 20px;
+        padding: 0 10px; /* Padding réduit */
+    }
+
+    .sidebar i {
+        font-size: 1.5rem; /* Réduction de la taille des icônes */
+        padding: 0 5px; /* Réduction du padding entre les icônes */
+    }
+
+    .contact-form {
+        width: 60%; /* Largeur légèrement augmentée */
+        right: 20%; /* Centrage */
+        height: 250px; /* Réduction de la hauteur */
+        top: 8%; /* Repositionnement */
+    }
+
+    .contact-form.access {
+        width: 60%;
+        right: 20%;
+        height: 70px; /* Hauteur encore plus réduite pour le déroulant access */
+        top: 5%;
+    }
+
+    .contact-form-content {
+        padding: 10px; /* Réduction du padding */
+    }
+
+    .cv-form img {
+        width: 80%; /* Ajustement de la largeur de l'image */
+        margin-top: 20px;
+    }
+
+    .access-content {
+        padding: 1.5rem; /* Réduction du padding */
+    }
+
+    .access-content h4 {
+        font-size: 1.5rem; /* Réduction de la taille du texte */
+    }
+
+    #joystick {
+        width: 60%; /* Réduction de la largeur du joystick */
+    }
+
+    .cv-form-content > .download-btn {
+        width: 40px;
+        height: 40px;
+        margin-top: 10px;
+    }
+
+    .download-btn i {
+        font-size: 1.8rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 5px;
+        margin: 3px 0;
+        font-size: 0.8rem;
+    }
+
+    .contact-form textarea {
+        height: 50px;
+    }
+    .contact-info p{
+        font-size: 12px;
+    }
+
+    .contact-form button {
+        padding: 6px;
+        margin-top: 8px;
+        font-size: 0.8rem;
+    }
+}

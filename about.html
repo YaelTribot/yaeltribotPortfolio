@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Yael Tribot - About</title>
+
+        <link rel="stylesheet" href="./assets/css/about.css">
+        <link rel="stylesheet" href="./assets/menu/menu.css">
+        <link rel="stylesheet" href="./assets/css/cool.css">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    </head>
+    <body>
+        <a href="index.html" class="home-link">
+            <i class="fa-solid fa-house"></i>
+        </a>
+
+        <div class="dvd-logo">
+            <span>YAEL</span><br>
+            <span>TRIBOT</span>
+        </div>
+    
+    <div class="background-video-container">
+        <video class="background-video" autoplay muted loop>
+            <source src="./assets/images/vintage.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <div id="site-menu">
+        <!-- Bouton pour afficher le menu -->
+        <img src="./assets/menu/img/multicolor-button.webp" class="menu-btn" alt="Le menu">
+
+   
+        <!-- Menu latéral -->
+        <div class="sidebar">
+            <a href="/YaelTribot/about.html"><i class="fa-solid fa-circle-info"></i></a>
+            <i class="fa-solid fa-phone"></i>
+            <i class="fa-solid fa-file"></i>
+            <i class="fa-solid fa-universal-access"></i>
+        </div>
+
+        <!-- Section Contact -->
+        <div class="contact-form info-form">
+            <div class="contact-form-content">
+                <div class="contact-info">
+                    <p>Tel : +33 7 67 68 62 57</p>
+                    <p>Email : pro.yaeltribot@gmail.com</p>
+                </div>
+                <form>
+                    <input type="email" id="email" placeholder="Email">
+                    <textarea id="message" placeholder="Message"></textarea>
+                    <button type="submit">Envoyer</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Section CV -->
+        <div class="contact-form cv-form">
+            <div class="cv-form-content">
+                <a href="./assets/menu/img/CV-de-Yael-Tribot.pdf"><img src="assets/menu/img/cv.png" alt="Mon CV"></a>
+                <button class="download-btn">
+                    <i class="fa-solid fa-download"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Section Accessibilité -->
+        <div class="contact-form access">
+            <div class="access-content">
+                <h4 id="a-">A-</h4>
+                <input type="range" name="joystick" id="joystick" min="0.8" max="1.5" step="0.1" value="1">
+                <h4 id="a+">A+</h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <header>
+          <h1>À Propos</h1>
+        </header>
+    
+        <main>
+            <section class="profile">
+                <div class="avatar">
+                    <img src="./assets/images/2D/MAN3.webp" alt="Jean Dupont">
+                </div>
+                    
+                <div class="profile-info">
+                    <h2>Yael Tribot</h2>
+                </div>
+            
+                <p class="description">Je suis étudiant en BUT MMI à Angoulême. Mon objectif principal c'est de faire Shrek 6 (Shrek 5 étant en cours de réalisation). 
+                Ce que j'aimerais faire plus tard c'est de la 3D, c'est l'univers qui ma fascine le plus alors j'aimerais en faire ma vocation.</p>
+                    
+                <h2>Compétences</h2>
+                <div class="skills">  
+                    <img src="./assets/images/AI.webp" alt="Illustrator" id="img1">
+                    <img src="./assets/images/ps.webp" alt="Photoshop" id="img2">
+                    <img src="./assets/images/blender.webp" alt="Blender" id="img3">
+                    <img src="./assets/images/DaVinci_Resolve_Studio.webp" alt="Davinci Resolve" id="img4">
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <script src="./assets/menu/menu.js"></script>
+    <script src="./assets/js/cool.js"></script>
+</body>
+</html>

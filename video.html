@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>YAEL TRIBOT - Vidéo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="./assets/css/video.css">
+    <link rel="stylesheet" href="./assets/menu/menu.css">
+    <link rel="stylesheet" href="./assets/css/cool.css">
+    <link rel="stylesheet" href="./assets/css/DVD.css">
+    <link rel="stylesheet" href="./assets/css/toggle.css">
+    <link rel="stylesheet" href="./assets/css/splash2.css">
+
+    <script src="https://kit.fontawesome.com/ed741ebe70.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div class="dvd-logo">
+        <span>YAEL</span><br>
+        <span>TRIBOT</span>
+    </div>
+
+    <div class="background-video-container">
+        <video class="background-video" autoplay muted loop>
+            <source src="./assets/images/vintage.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <div class="preview-overlay">
+        <img src="#" alt="Preview" class="preview-image">
+    </div>
+    
+    <a href="index.html" class="home-link">
+        <i class="fa-solid fa-house"></i>
+    </a>
+    
+    <div class="nbPage"></div>
+
+    <div id="site-menu">
+        <!-- Bouton pour afficher le menu -->
+        <img src="./assets/menu/img/multicolor-button.webp" class="menu-btn" alt="Le menu">
+
+   
+        <!-- Menu latéral -->
+        <div class="sidebar">
+            <a href="/YaelTribot/about.html"><i class="fa-solid fa-circle-info"></i></a>
+            <i class="fa-solid fa-phone"></i>
+            <i class="fa-solid fa-file"></i>
+            <i class="fa-solid fa-universal-access"></i>
+        </div>
+
+        <!-- Section Contact -->
+        <div class="contact-form info-form">
+            <div class="contact-form-content">
+                <div class="contact-info">
+                    <p>Tel : +33 7 67 68 62 57</p>
+                    <p>Email : pro.yaeltribot@gmail.com</p>
+                </div>
+                <form>
+                    <input type="email" id="email" placeholder="Email">
+                    <textarea id="message" placeholder="Message"></textarea>
+                    <button type="submit">Envoyer</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Section CV -->
+        <div class="contact-form cv-form">
+            <div class="cv-form-content">
+                <a href="./assets/menu/img/CV-de-Yael-Tribot.pdf"><img src="assets/menu/img/cv.png" alt="Mon CV"></a>
+                <button class="download-btn">
+                    <i class="fa-solid fa-download"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Section Accessibilité -->
+        <div class="contact-form access">
+            <div class="access-content">
+                <h4 id="a-">A-</h4>
+                <input type="range" name="joystick" id="joystick" min="0.8" max="1.5" step="0.1" value="1">
+                <h4 id="a+">A+</h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="video-section">
+        <!-- Navigation avec images -->
+        <div class="carousel-navigation">
+            <div class="carousel-dots">
+                <div class="dot active">
+                    <img src="./assets/images/video/MONLEGOCV.webp" alt="Miniature 1">
+                </div>
+                <div class="dot">
+                    <img src="./assets/images/video/bourrepif.webp" alt="Miniature 2">
+                </div>
+                <div class="dot">
+                    <img src="./assets/images/video/audition.webp" alt="Miniature 3">
+                </div>
+            </div>
+        </div>
+    
+        <div class="main-content">
+            <div class="video-container">
+                <div class="youtube-container">
+                    <iframe
+                        src="https://www.youtube.com/embed/1q2qI_CXfa4"
+                        title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+            <div class="text-container">
+                <div class="text-content">
+                    <i class="fa-solid fa-compact-disc"></i>
+                    <h2>Titre du projet 1</h2>
+                    <p id="hell">Description du projet...</p>
+                </div>
+            </div>
+        </div>
+        <div class="rotating-container">
+            <img id="rotating-image" src="./assets/images/DVD/dvd-video.png" alt="DVD Image">
+        </div>
+
+        <button class="toggle-nav-btn"><i class="fa-solid fa-circle"></i></button>
+    </div>
+
+    <div class="splash-screen" id="splash2">
+        <div class="splash-content">
+            <div class="splash-icon">
+                <div class="cursor"></div>
+            </div>
+            <div class="splash-equal">=</div>
+            <div class="splash-question">?</div>
+        </div>
+    </div>
+
+    <script src="./assets/menu/menu.js"></script>
+    <script src="./assets/js/video.js"></script>
+    <script src="./assets/js/cool.js"></script>
+    <script src="./assets/js/toggle.js"></script>
+    <script src="./assets/js/splash2.js"></script>
+</body>
+</html>

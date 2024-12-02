@@ -1,0 +1,270 @@
+/* Reset global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+/* Home button */
+.home-link {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 9999;
+    color: #333;
+    text-decoration: none;
+    font-size: 24px;
+    padding: 10px;
+    border-radius: 50%;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.home-link:hover {
+    transform: scale(1.1);
+}
+
+.carousel-navigation {
+    gap: 1rem;
+    padding: 1rem;
+    height: 100vh;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    z-index: 910;
+}
+
+.carousel-navigation.extended {
+    transform: translateX(250px);
+}
+
+.carousel-dots {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.dot {
+    width: 180px;
+    height: 100px;
+    border-radius: 0;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.carousel-dots .dot img {
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.dot.active {
+    border-color: #333;
+    transform: scale(1.1);
+}
+
+.preview-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 900;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.preview-overlay.visible {
+    opacity: 1;
+}
+
+.preview-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.video-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1700px;
+}
+
+.image-container,
+.text-container {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.main-gallery-image,
+.text-content {
+    border-radius: 20px;
+}
+
+.image-container {
+    height: auto;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.main-gallery-image {
+    width: 100%;
+    height: auto;
+    max-height: 700px;
+    object-fit: contain;
+    border-radius: 20px;
+    transition: opacity 0.3s ease;
+}   
+
+.text-content {
+    background-color: black;
+    color: beige;
+    padding: 30px;
+}
+
+.text-content h2, 
+.text-content p {
+    transition: opacity 0.3s ease;
+}
+
+.fa-compact-disc {
+    text-align: center;
+    font-size: 35px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 25px;
+}
+
+p {
+    font-size: 20px;
+}
+
+
+/* Responsive Breakpoints */
+@media (max-width: 1100px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .carousel-navigation {
+        display: none;
+    }
+
+    .home-link {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        font-size: 24px;
+    }
+
+    .image-container,
+    .text-container {
+        width: 80%;
+    }
+
+    .text-container {
+        z-index: 99;
+    }
+
+    .text-content {
+        background-color: black;
+        color: beige;
+        padding: clamp(15px, 4vw, 30px);
+    }
+    
+    .fa-compact-disc {
+        font-size: clamp(20px, 5vw, 35px);
+    }
+
+    h2 {
+        font-size: clamp(20px, 5vw, 35px);
+        margin-bottom: 1rem;
+    }
+    
+    p {
+        font-size: clamp(14px, 3vw, 20px);
+    }
+}
+
+@media (max-width: 600px) {
+    .image-container,
+    .text-container {
+        width: 95%;
+    }
+
+    .main-content {
+        margin-bottom: 180px;
+    }
+
+    .text-content {
+        padding: clamp(10px, 3vw, 15px);
+    }
+
+    .fa-compact-disc {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 450px) {
+    .main-content {
+        margin-bottom: 100px;
+    }
+
+    .fa-compact-disc {
+        font-size: 26px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+}
